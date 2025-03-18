@@ -11,9 +11,7 @@ load_dotenv()
 
 client = genai.Client(api_key=os.getenv('API_KEY'))
 
-contents = ('Hi, can you create a 3d rendered image of a pig '
-           'with wings and a top hat flying over a happy '
-           'futuristic scifi city with lots of greenery?')
+contents = input("Enter a description of the image you want to generate: ")
 
 response = client.models.generate_content(
     model="gemini-2.0-flash-exp-image-generation",
